@@ -1,0 +1,492 @@
+/**
+ * Global Styles (Body, Buttons, Reusable PHP Blocks)
+ *
+ * @package Postali Child
+ * @author Postali LLC
+*/
+* {
+    min-height: 0;
+    min-width: 0;
+} 
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @media screen and (max-width: $screen-sm) {
+        
+    }
+}
+
+header {
+    border-bottom:2px solid $lightgray;
+}
+
+.container {
+    max-width:$screen-xl;
+    padding: 0 30px;
+    z-index: 1;
+    position: relative;
+    @media screen and (max-width: $screen-xs) {
+        padding: 0 20px;
+    }
+    .skinny {
+        width: 85%;
+        margin: 0 auto;
+        @media screen and (max-width:$screen-sm) {
+            width:100%;
+          }
+    }
+}
+
+section {
+    padding: 80px 0;
+    background-size: cover !important;
+    background-position: center center !important;
+    overflow: hidden;
+    &.lightgray {
+        background-color: $lightgray;
+    }
+    &.taller {
+        padding:120px 0 80px;
+        @media screen and (max-width:$screen-sm) {
+            padding: 50px 0;
+        }
+    }
+    &.smaller {
+        padding:50px 0;
+        @media screen and (max-width:$screen-xxs) {
+            padding:0 0 50px 0 !important;
+          }
+    }
+    @media screen and (max-width:$screen-sm) {
+        padding:50px 0;
+      }
+      &#attorney-bio {
+          padding-top:55px;
+          @media screen and (max-width:$screen-md) {
+            padding-top:10px;
+          }
+      }
+}
+.columns-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    .column-full {
+        width:100%;
+    }
+    .column-half {
+        width: 48%;
+        @media screen and (max-width:480px) {
+            width:100%;
+            margin-top:20px;
+        }
+    }
+    .column-fourth {
+        width:23%;
+    }
+    .column-three-fourths {
+        width:68%
+    }
+    .column-third {
+        width:31%;
+        @media screen and (max-width:$screen-sm) {
+            width: 100%;
+            margin-top: 30px;
+        }
+        img {
+            @media screen and (max-width:$screen-sm) {
+                margin:0 auto;
+            }
+        }
+    }
+    .column-two-thirds {
+        width:64%;
+        @media screen and (max-width:$screen-sm) {
+            width:100%
+        }
+    }
+    @media screen and (max-width:$screen-sm) {
+        .left-image {
+            display:none;
+        }
+    }
+}
+
+//* random spacing & alignment elements *//
+.centered {
+    text-align:center;
+}
+img.centered {
+    margin:0 auto;
+}
+.no-margin {
+    margin:0;
+}
+.spacer-30 {
+    display:block;
+    width:100%;
+    height:30px;
+    padding:0;
+    margin:0;
+}
+.spacer-60 {
+    display:block;
+    width:100%;
+    height:60px;
+    padding:0;
+    margin:0;
+    @media screen and (max-width:$screen-sm) {
+        height:30px;
+    }
+}
+
+//* various button styles *//
+
+.button.contact {
+    display:inline-block;
+    padding:7px 60px;
+    color:$white;
+    font-family:$sans;
+    background:$blue;
+    margin-top:20px;
+    text-transform: uppercase;
+    &:hover {
+        background:$emerald;
+    }
+    @media screen and (max-width:480px) {
+        padding:6px 15px;
+        font-size:17px;
+    }
+}
+.button.links {
+    display: inline-block;
+    padding: 6px 40px;
+    color: #000043;
+    font-family: "Open Sans",sans-serif;
+    background: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border: 1px solid #000043;
+    margin-right: 70px;
+    position: relative;
+    transition:.2s ease all;
+    &:hover {
+        color:$emerald;
+        transition:.2s ease all;
+        &:after {
+            background:$blue;
+        }
+    }
+    &:after {
+        content: "\e908";
+        font-family:icomoon;
+        font-size:20px;
+        position: absolute;
+        right: -54px;
+        height: auto;
+        width: auto;
+        background: $emerald;
+        padding: 6px 16px;
+        top: -1px;
+        color: white;
+        border: 1px solid $blue;
+        transition:.2s ease all;
+        transform:rotat(-90deg);
+    }
+    @media screen and (max-width:480px) {
+        padding:6px 15px;
+        font-size:17px;
+    }
+}
+
+// notable recoveries scroller //
+
+#recoveries {
+    padding:50px 0 80px;
+    h2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 40PX;
+    }
+    #notable-results-slides {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .slide {
+            display: flex;
+            flex-direction: column;
+            width: 49%;
+            padding: 35px 50px;
+            background: $white;
+            border:1px solid #D6D6D6;
+            margin-right:20px;
+            min-height:240px;
+            @media screen and (max-width:$screen-md) {
+                width:100%;
+                margin-right:0;
+            }
+            @media screen and (max-width:$screen-xxs) {
+                padding:15px 30px;
+            }
+            .slide-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @media screen and (max-width:$screen-xs) {
+                    flex-wrap:nowrap;
+                }
+                @media screen and (max-width:$screen-xxs) {
+                    flex-wrap:wrap !important;
+                }
+                .text-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    @media screen and (max-width:$screen-xxs) {
+                        width:100%;
+                        h3 {
+                            line-height: 95%;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                    }
+                    .result-details {
+                        font-family:$serif;
+                        color:$blue;
+                        font-size:24px;
+                        line-height:145%;
+                        min-height: 70px;
+                        @media screen and (max-width:$screen-xxs) {
+                            font-size:22px;
+                            line-height:125%;
+                        }
+                    }
+                    p.practice-area {
+                        font-family:$sans;
+                        color:$emerald;
+                        font-size:16px;
+                        margin-top:30px;
+                        margin-bottom:0;
+                        text-transform:uppercase;
+                        display:none;
+                    }
+                }
+                .separator {
+                    display: none;
+                    flex-direction: column;
+                    width: 1%;
+                    border-left: 1px solid #ccc;
+                    @media screen and (max-width:$screen-xxs) {
+                        display:none;
+                    }
+                }
+                .attorney-container {
+                    display: none;
+                    flex-direction: column;
+                    width: 17%;
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: $sans;
+                    color: $blue;
+                    line-height: 24px;
+                    @media screen and (max-width:$screen-xxs) {
+                        width:100%;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        border-top: 1px solid $darkgray;
+                        padding-top: 5px;
+                        margin-top: 20px;
+                    }
+                    .headshot-box {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background-size: cover;
+                        align-self: center;
+                        margin-bottom:20px;
+                        margin-top:10px;
+                        @media screen and (max-width:$screen-xxs) {
+                            min-width: 70px;
+                            min-height: 70px;
+                            border-radius: 50%;
+                            background-size: cover;
+                            align-self: center;
+                            margin-bottom: 10px;
+                            margin-top: 20px;
+                            display: flex;
+                            width: 19%;
+                            flex-direction: column;
+                            align-self: self-start;
+                        }
+                        @media screen and (max-width:$screen-xxxs) {
+                            min-width: 60px;
+                            min-height: 60px;
+                            width: 14%;
+                        }
+                    }
+                    .attorney-link {
+                        @media screen and (max-width:$screen-xxs) {
+                            display: flex;
+                            width: 74%;
+                            flex-direction: column;
+                            text-align: left;
+                            align-self: center;
+                            padding-left: 10%;
+                        }
+                        @media screen and (max-width:$screen-xxxs) {
+                            width:70%;
+                        }
+                        a {
+                            color:$blue;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration:underline;
+                                color:$emerald;                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .prev-next-container {
+        display: flex;
+        margin-top: 25px;
+        #results-prev,
+        #results-next {
+            padding: 10px 40px;
+            background: $blue;
+            .icon-drw-chevron-left::before,
+            .icon-drw-chevron-right::before {
+                color:$white;
+                font-size:22px;
+                display:block;
+                line-height:100%;
+            }
+        }
+        #results-prev {
+            margin-right:10px;
+        }
+    }
+}
+
+// Accordion styles //
+.accordions { 
+    width:70%;
+    margin:0 auto;
+    @media screen and (max-width: $screen-sm) {
+        margin:0 auto;
+        width:100%;
+    }
+}
+.accordions h2 {
+
+    border-bottom: 1px solid $blue;
+    display: block;
+    margin: 0 !important;
+    cursor: pointer;
+    font-family: $serif;
+    padding: 12px 0 25px;
+    text-align: left;
+    @media screen and (max-width: $screen-sm) {
+        font-size:26px;
+    }
+    @media screen and (max-width: $screen-xs) {
+        font-size:22px;
+        padding-right: 70px;
+    }
+}
+.accordions p { font-size: 20px; line-height: 36px; position: relative; overflow: hidden;  opacity: 1; transform: translate(0, 0); margin-top: 0; z-index: 2; padding: 24px 0 26px; text-align: left; color:$blue !important; }
+.accordions ul { list-style: none; perspective: 900; padding: 0; margin: 0; }
+.accordions ul li { position: relative; padding: 0; margin: 0 0 12px; padding-bottom: 4px; padding: 0; } 
+.accordions ul li:before { content:""; } 
+.accordions ul li i { 
+    position: absolute; transform: translate(-6px, 0); margin-top: 23px; right: 36px; text-align: right !important; 
+    @media screen and (max-width: $screen-sm) {
+        margin-top:20px;
+    }
+    @media screen and (max-width: $screen-xs) {
+        margin-top:15px;
+    }
+}
+.accordions ul li i:before, ul li i:after { content: ""; position: absolute; background-color: $emerald; width: 4px; height: 20px; }
+.accordions ul li i:before { transform: translate(11px, 0) rotate(45deg); transition:.3s ease all; }
+.accordions ul li i:after { transform: translate(11px, 0) rotate(-45deg); transition:.3s ease all; }
+.accordions ul li input[type=checkbox] { position: absolute; cursor: pointer; width: 100%; height: 100%; z-index: 1; opacity: 0; left:0; transition:.3s ease all !important; }
+.accordions ul li input[type=checkbox]:checked ~ p { margin-top: -37px; max-height: 0; opacity: 0; transform: translate(0, 50%); padding: 10px 0 26px; margin-bottom:12px; transition:.3s ease all !important; }
+.accordions ul li input[type=checkbox] ~ p { transition:.2s ease all !important; }
+.accordions ul li input[type=checkbox]:checked ~ i:before { transform: translate(10px, 0) rotate(90deg); transition:.3s ease all; }
+.accordions ul li input[type=checkbox]:checked ~ i:after { transform: translate(10px, 0) rotate(0deg); transition:.3s ease all; }
+.accordions ul li br { display:none; }
+.accordions ul li p br { display:block; }
+.accordions p a { color:#e20c0f; }
+
+// misc global form styles //
+.wpcf7-form input[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 0 !important;
+}
+
+
+// best laywers badge //
+.best-lawyers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    img {
+        max-width: 162px;
+        margin: 0 auto;
+        flex-basis: 47%;
+    }
+}
+
+.gform_wrapper.gravity-theme {
+    .gfield_label {
+        font-family: $sans;
+        color: $blue;
+    }
+
+    .gfield_description {
+        padding-top: 0;
+    }
+
+    .gfield-choice-input {
+        height: 25px;
+        width: 25px;
+        margin: 5px 0;
+    }
+
+    .gfield--type-text {
+        margin-bottom: 15px !important;
+    }
+    .gform_footer {
+        padding: 0;
+
+        input#gform_submit_button_1 {
+            background: $emerald;
+            color: $white;
+            border: none;
+            padding: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            display: block;
+            width: 100%;
+            margin: 0 !important;
+            font-family: $sans;
+
+            &:hover {
+                background: $blue;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "key": "group_63d2c6040637a",
+    "title": "On-page Navigation",
+    "fields": [
+        {
+            "key": "field_63d2c604b2705",
+            "label": "On-Page Nav Menu Items",
+            "name": "on-page_nav_menu_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63d2c62fb2706",
+                    "label": "Menu Item Name",
+                    "name": "menu_item_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63d2c604b2705"
+                },
+                {
+                    "key": "field_63d2c637b2707",
+                    "label": "Menu Item Link",
+                    "name": "menu_item_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Add anchor tag here. This must match the anchor on the specific H2 you want to jump to. If that H2 is not already tagged with an ID, use the following code: id=\"#youranchortext\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63d2c604b2705"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-practiceareas.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1674757833
+}

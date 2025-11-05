@@ -1,0 +1,139 @@
+{
+    "key": "group_5d7f9a1da0433",
+    "title": "Content Block - Right Sidebar",
+    "fields": [
+        {
+            "key": "field_5d7f9a331ca8c",
+            "label": "Content Block - Right Sidebar",
+            "name": "content_block-right_sidebar",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5d7f9a4f32dbb": {
+                    "key": "layout_5d7f9a4f32dbb",
+                    "name": "",
+                    "label": "",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d7fa861fd02d",
+                            "label": "Main Content Block",
+                            "name": "main_content_block",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_5d7fa89bd504f": {
+                                    "key": "layout_5d7fa89bd504f",
+                                    "name": "",
+                                    "label": "",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5d7f9a6d1ca8e",
+                                            "label": "Main Content Block - Top",
+                                            "name": "main_content_block_top",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "tabs": "text",
+                                            "media_upload": 1,
+                                            "toolbar": "full",
+                                            "delay": 0
+                                        },
+                                        {
+                                            "key": "field_5d7fa7d38d210",
+                                            "label": "Quote Block",
+                                            "name": "quote_block",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_5d7fa82a8d211",
+                                            "label": "Main Content Block - Bottom",
+                                            "name": "main_content_block_bottom",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "tabs": "text",
+                                            "media_upload": 1,
+                                            "toolbar": "full",
+                                            "delay": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add Row",
+                            "min": "",
+                            "max": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-practiceareas.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1571923035
+}

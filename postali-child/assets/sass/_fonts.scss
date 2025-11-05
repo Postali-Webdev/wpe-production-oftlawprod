@@ -1,0 +1,242 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+@font-face {
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/wp-content/themes/postali-child/assets/fonts/DMSerifDisplay-Regular.ttf) format("truetype");
+}  
+
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+p, a, ul, ol {
+
+}
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+    font-family:$sans;
+    line-height:200%; 
+}
+dl, blockquote, img {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: normal;
+}
+
+/* random color styles */
+.emerald {
+    color:$emerald;
+}
+.emerald.italic {
+    font-family:$serif;
+    color:$emerald;
+    line-height:100%;
+    font-style: italic;
+}
+
+ul {
+    margin-bottom:28px;
+    &.two-column {
+        -moz-column-count: 2;
+        column-count: 2;
+        list-style-type: none;
+        margin-left:0;
+        @media screen and (max-width:$screen-xxs) {
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+    li {
+        margin-left:0;
+        color:$blue;
+
+        a {
+            font-family: inherit;
+        }
+    }
+    &.caps {
+        text-transform:uppercase;
+    }
+}
+
+a {
+    text-decoration:underline;
+    transition:$trans;
+    color:$emerald;
+    &:hover {
+        color:$blue;
+        text-decoration:none;
+    }
+    &.italic {
+        font-style:italic;
+    }
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 40px;
+    // background-color:$lt-red;
+    text-decoration:none;
+    // color:$white;
+    // border:2px solid $lt-red;
+    transition:$trans;
+    &:hover {
+        // background-color:$dk-red;
+    }
+}
+
+p {
+    font-size:20px;
+    line-height: 200%;
+    margin-bottom:30px;
+    font-family:$sans;
+    color:$blue;
+    &.highlight {
+        color:$emerald;
+        font-size:16px;
+        margin:0;
+        text-transform:uppercase;
+        font-weight:700;
+        &.separator {
+            position:relative;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 16px;
+                height: 1px;
+                border-top: 1px solid $darkgray;
+                width: 90%;
+                left: 10%;
+                @media screen and (max-width:1024px) {
+                    width:85%;
+                    left:15%;
+                }
+                @media screen and (max-width:$screen-sm) {
+                    width:80%;
+                    left:20%
+                }
+                @media screen and (max-width:$screen-xs) {
+                    border-top:none;
+                }
+            }
+        }
+    }
+    &.green-caps {
+        color:$emerald;
+        text-transform:uppercase;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    &.dashed {
+        margin-left:70px;
+        font-style:italic;
+        position: relative;
+        margin-bottom: 15px;
+        line-height: 170%;
+        &:before {
+            position: absolute;
+            content: "";
+            left: -60px;
+            border-bottom: 2px solid #15A387;
+            height: 2px;
+            top: 16px;
+            width: 40px;
+        }
+    }
+    &.smaller {
+        font-size:18px;
+    }
+    &.disclaimer {
+        font-size: 16px;
+        line-height: 125%;
+        margin-bottom: 0;
+        @media screen and (max-width:$screen-sm) {
+            margin-bottom:40px;
+        }
+    }
+    a {
+        font-family: inherit;
+    }
+}
+
+h1 {
+    color:$emerald;
+    font-family:$sans;
+    font-size:16px;
+    line-height:100%;
+    margin-bottom:25px;
+    position:relative;
+}
+h2 {
+    font-family:$serif;
+    font-size:44px;
+    color:$blue;
+    line-height:110%;
+    margin:10px 0;
+    position:relative;
+    @media screen and (max-width:$screen-sm) {
+        font-size:36px;
+    }
+    @media screen and (max-width:$screen-xxs) {
+        font-size:30px;
+    }
+    &.bigger {
+        font-size:65px;
+        @media screen and (max-width:$screen-sm) {
+            font-size:50px;
+        }
+        @media screen and (max-width:$screen-xxs) {
+            font-size:36px;
+        }
+    }
+    &.smaller {
+        font-size:36px;
+        @media screen and (max-width:$screen-sm) {
+            font-size:50px;
+        }
+        @media screen and (max-width:$screen-xxs) {
+            font-size:28px;
+        }
+    }
+    &.dashed {
+        &:before {
+            position: absolute;
+            content: "";
+            left: -60px;
+            border-bottom: 2px solid #15A387;
+            height: 2px;
+            top: 23px;
+            width: 40px;
+        }
+    }
+}
+h3 {
+    font-family:$serif;
+    font-size:38px;
+    color:$blue;
+    line-height:110%;
+    margin:10px 0;
+    position:relative;
+    @media screen and (max-width:$screen-sm) {
+        font-size:36px;
+    }
+}
+
+h4 {
+    font-family: $serif;
+    font-size: 24px;
+    color: $blue;
+    margin-bottom: 10px;
+}
