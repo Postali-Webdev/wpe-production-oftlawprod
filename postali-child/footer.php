@@ -18,6 +18,7 @@
 		<div class="spacer-30"></div>
 		<div class="column-third"><?php the_field('contact_block_content','options'); ?></div>
 		<div class="column-third" id="footer-menu">
+            <nav role="navigation">
 			<?php
 				$args = array(
 					'container'      => false,
@@ -25,6 +26,7 @@
 				);
 				wp_nav_menu( $args );
 			?>
+            </nav>
 		</div>
 		<div class="column-third">
             <?php the_field('footer_copy_block','options'); ?>
